@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list 2024 width LocalStorage</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style/main.css">
+
+</head>
+<body>
+    <!--first part-->
+<main class="app">
+    <section class="greeting">
+        <h2 class="title">
+            E aí, 
+            <input 
+            type="text" 
+            id="name" 
+            placeholder="Seu nome aqui">
+        </h2>
+    </section>
+    
+    <!--Second part-->
+    <section class="create-todo">
+        <h3>CRIE UM PARA FAZER</h3>
+        <form  id="new-todo-form">
+            
+            <h4>O que está na sua lista de tarefas?</h4>
+            <input 
+            type="text" 
+            name="content" 
+            id="content" 
+            placeholder="por exemplo, faça um vídeo"/>
+
+     
+            <h4>Escolha uma categoria</h4>
+            <div class="options" >
+               
+                <label >
+                   <input 
+                    type="radio" 
+                    name="category" 
+                    id="category1" 
+                    value="business"/>
+                    <span class="bobble business"></span>
+                    <div>Negócios</div>
+               </label>
+               
+               <label>
+                   <input 
+                    type="radio" 
+                    name="category" 
+                    id="category" 
+                    value="personal"/>
+                    <span class="bobble personal"></span>
+                    <div>Pessoal</div>
+               </label>
+           </div>
+                
+                  <input type="submit" value="add to do">
+        </form>
+    </section>
+  
+    <!--Third part--> 
+    <section class="todo-list">
+        <h3>LISTA DE AFAZERES</h3>
+       
+        <div class="list" id="todo-list">
+            
+            <div class="todo-item done">
+                <label>
+                    <input type="checkbox"/>
+                    <span class="bobble business"></span>
+                </label>
+                <div class="todo-content">
+                    <input type="text" value="Make a video" readonly />
+                </div>
+                <div class="actions">
+                   <button class="edit">Edite</button>
+                   <button class="delete">Delete</button>
+                </div>
+            </div>
+       
+            <div class="todo-item">
+                <label>
+                    <input type="checkbox"/>
+                    <span class="bobble personal"></span>
+                </label>
+                <div class="todo-content">
+                    <input type="text" value="Get milk" readonly />
+                </div>
+                <div class="actions">
+                <button class="edit">Edite</button>
+                <button class="delete">Delete</button>
+                </div>
+            </div>
+    </div>
+    </section>
+ 
+</main>
+
+  <script src="../script/main.js"></script>  
+</body>
+</html>
